@@ -34,7 +34,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun initEvent() {
 
-        
+        botonLlamada = binding.botonLlamada
+        botonLlamada.setOnClickListener{
+                view->
+            intent = Intent(this, TelefonoActivity::class.java).apply{
+                putExtra("name", "maria")
+            }
+            startActivity(intent)
+        }
+
         botonEmail = binding.botonEmail
         botonEmail.setOnClickListener{
             val email = "micorreo@gmail.com"
