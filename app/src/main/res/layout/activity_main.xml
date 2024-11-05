@@ -9,64 +9,105 @@
     tools:context=".MainActivity">
 
 
-    <ImageButton
-        android:id="@+id/botonAlarma"
-        android:layout_width="59dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="428dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="114dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="520dp"
+        app:cardCornerRadius="75dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/despertador" />
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="208dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="152dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
+        <ImageButton
+            android:id="@+id/botonMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-    <ImageButton
-        android:id="@+id/botonLlamada"
-        android:layout_width="67dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="76dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/telefono__1_" />
+            android:layout_gravity="center"
+            android:background="@drawable/degradado2"
+            app:srcCompat="@drawable/localizacion"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/botonEmail"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="528dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="148dp"
+        app:cardCornerRadius="2000dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gmail" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="78dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="208dp"
+            android:layout_height="200dp"
 
-    </com.google.android.material.chip.ChipGroup>
 
-    <ImageButton
-        android:id="@+id/botonMap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="528dp"
+            app:srcCompat="@drawable/img"
+            tools:ignore="ContentDescription"
+            tools:layout_editor_absoluteX="-82dp"
+            tools:layout_editor_absoluteY="265dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="114dp"
+        android:layout_height="117dp"
+        app:cardCornerRadius="75dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="396dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/localizacion" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageButton
+            android:id="@+id/botonAlarma"
+            android:layout_width="match_parent"
+            android:background="@drawable/degradado2"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/despertador"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="119dp"
+        android:layout_height="115dp"
+        app:cardCornerRadius="75dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="396dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/botonLlamada"
+            android:background="@drawable/degradado2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/telefono__1_"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="114dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="520dp"
+        app:cardCornerRadius="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageButton
+            android:id="@+id/botonEmail"
+            android:background="@drawable/degradado2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:layout_gravity="center"
+            app:srcCompat="@drawable/gmail"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
