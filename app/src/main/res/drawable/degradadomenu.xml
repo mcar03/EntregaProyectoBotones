@@ -3,10 +3,11 @@
 
     <item>
         <shape android:shape="rectangle">
-                <gradient
-                    android:startColor="@color/azulMenu"
-                    android:endColor="@color/white"
-                    ></gradient>
+            <gradient
+                android:startColor="@color/azulMenu"
+                android:endColor="@color/white"
+
+                ></gradient>
         </shape>
     </item>
 </selector>

@@ -6,6 +6,6 @@
     <color name="uno">#D100FF</color>
     <color name="dos">#454545</color>
     <color name="tres">#000000</color>
-
+    <color name="azulMenu">#2196F3</color>
     <color name="cuatro">#FF00F0</color>
 </resources>

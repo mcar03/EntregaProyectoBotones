@@ -9,105 +9,340 @@
     tools:context=".MainActivity">
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="114dp"
-        android:layout_height="117dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginTop="520dp"
-        app:cardCornerRadius="75dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/botonMap"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/degradadomenu"
+            android:orientation="vertical">
 
-            android:layout_gravity="center"
-            android:background="@drawable/degradado2"
-            app:srcCompat="@drawable/localizacion"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-    </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="148dp"
-        app:cardCornerRadius="2000dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="208dp"
-            android:layout_height="200dp"
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="800dp"
+                        android:layout_margin="20dp"
+                        android:backgroundTint="#DEDBDB">
 
+                        <ImageButton
+                            android:id="@+id/imageButtonHome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#DEDBDB"
+                            android:src="@drawable/hogar_1_"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    </androidx.cardview.widget.CardView>
 
-            app:srcCompat="@drawable/img"
-            tools:ignore="ContentDescription"
-            tools:layout_editor_absoluteX="-82dp"
-            tools:layout_editor_absoluteY="265dp" />
-    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
-        android:layout_width="114dp"
-        android:layout_height="117dp"
-        app:cardCornerRadius="75dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginTop="396dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:backgroundTint="#DEDBDB"
+                        app:cardCornerRadius="800dp">
 
-        <ImageButton
-            android:id="@+id/botonAlarma"
+                        <ImageButton
+                            android:id="@+id/imageButtonGuardado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#DEDBDB"
+                            android:src="@drawable/marcador"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:backgroundTint="#DEDBDB"
+                        app:cardCornerRadius="800dp">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonComentarios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#DEDBDB"
+                            android:src="@drawable/revision_positiva"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:backgroundTint="#DEDBDB"
+                        app:cardCornerRadius="800dp">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonAjustes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#DEDBDB"
+                            android:src="@drawable/engranaje"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:background="@drawable/degradado2"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/despertador"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-    </androidx.cardview.widget.CardView>
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="119dp"
-        android:layout_height="115dp"
-        app:cardCornerRadius="75dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="396dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="75dp"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" >
 
-        <ImageButton
-            android:id="@+id/botonLlamada"
-            android:background="@drawable/degradado2"
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:background="#ABA1A1"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/dall_e_2024_11_21_13_50_27___a_modern_and_dynamic_logo_for_a_brand_named__nakedmotors___the_logo_should_feature_sleek_and_bold_typography__with_a_silhouette_or_outline_of_a_naked_" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/telefono__1_"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
 
-    </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="114dp"
-        android:layout_height="117dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="520dp"
-        app:cardCornerRadius="75dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/botonEmail"
-            android:background="@drawable/degradado2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-           android:layout_gravity="center"
-            app:srcCompat="@drawable/gmail"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
-    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="36dp"
+                                app:cardCornerRadius="70dp">
+
+                                <ImageButton
+                                    android:id="@+id/imageButtonTelefono"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="#DEDBDB"
+                                    app:srcCompat="@drawable/telefono"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="36dp"
+                                app:cardCornerRadius="70dp">
+
+                                <ImageButton
+                                    android:id="@+id/imageButtonJuegoDados"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="#DEDBDB"
+                                    app:srcCompat="@drawable/dados"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="36dp"
+                                app:cardCornerRadius="70dp">
+
+                                <ImageButton
+                                    android:id="@+id/imageButtonAlarma"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+
+                                    android:background="@drawable/degradadomenu"
+                                    app:srcCompat="@drawable/alarma_3d"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="36dp"
+                                app:cardCornerRadius="70dp">
+
+                                <ImageButton
+                                    android:id="@+id/imageButtonEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/degradadomenu"
+                                    app:srcCompat="@drawable/gmail_1_"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="36dp"
+                                app:cardCornerRadius="70dp">
+
+                                <ImageButton
+                                    android:id="@+id/imageButtonMaps"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="#DEDBDB"
+                                    app:srcCompat="@drawable/maps_and_location"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="36dp"
+                                app:cardCornerRadius="70dp">
+
+                                <ImageButton
+                                    android:id="@+id/imageButtonMotos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/degradadomenu"
+                                    app:srcCompat="@drawable/casco_de_carreras"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
