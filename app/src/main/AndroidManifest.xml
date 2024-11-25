@@ -35,6 +35,21 @@
         <activity
             android:name=".TelefonoActivity"
             android:exported="true"/>
+        <activity
+            android:name=".JuegoDadosActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ChistesActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".GuardadosActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".AjustesActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".MotosActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

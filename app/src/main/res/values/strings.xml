@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">pruebaMartin</string>
+    <string name="describe">Este ejemplo, te muestra un Imagebotton del risitas que si le das dos veces escuchas un chiste</string>
 </resources>

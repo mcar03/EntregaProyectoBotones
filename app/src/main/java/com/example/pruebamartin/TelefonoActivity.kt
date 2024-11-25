@@ -42,6 +42,7 @@ class TelefonoActivity: AppCompatActivity() {
     }
 
     private fun initEvent() {
+
         botonLlamada.setOnClickListener {
             numeroTelefono = introduceNumero.text.toString()
             if (numeroTelefono.isNotEmpty()) {
@@ -49,14 +50,14 @@ class TelefonoActivity: AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Introduce un telefono", Toast.LENGTH_SHORT).show()
             }
+        }
 
-            botonVolver = binding.buttonVolver
-            botonVolver.setOnClickListener { view ->
-                intent = Intent(this, MainActivity::class.java).apply {
-                    putExtra("name", "martin")
-                }
-                startActivity(intent)
+        botonVolver.setOnClickListener {
+                view->
+            intent = Intent(this, MainActivity::class.java).apply{
+                putExtra("name", "martin")
             }
+            startActivity(intent)
         }
     }
 

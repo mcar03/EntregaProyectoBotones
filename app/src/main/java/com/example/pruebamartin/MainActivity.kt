@@ -15,10 +15,21 @@ import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
+
     private lateinit var botonAlarma:ImageButton
     private lateinit var botonLlamada:ImageButton
     private lateinit var botonEmail:ImageButton
     private lateinit var botonMap:ImageButton
+    private lateinit var botonMotos:ImageButton
+    private lateinit var botonDados:ImageButton
+
+    private lateinit var botonHome:ImageButton
+    private lateinit var botonGuardados:ImageButton
+    private lateinit var botonChistes:ImageButton
+    private lateinit var botonAjustes:ImageButton
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -34,16 +45,49 @@ class MainActivity : AppCompatActivity() {
 
     private fun initEvent() {
 
-        botonLlamada = binding.botonLlamada
+        botonLlamada = binding.imageButtonTelefono
         botonLlamada.setOnClickListener{
                 view->
             intent = Intent(this, TelefonoActivity::class.java).apply{
-                putExtra("name", "maria")
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+        botonGuardados = binding.imageButtonGuardado
+        botonGuardados.setOnClickListener{
+                view->
+            intent = Intent(this, GuardadosActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+        botonAjustes = binding.imageButtonAjustes
+        botonAjustes.setOnClickListener{
+                view->
+            intent = Intent(this, AjustesActivity::class.java).apply{
+                putExtra("name", "martin")
             }
             startActivity(intent)
         }
 
-        botonEmail = binding.botonEmail
+        botonChistes = binding.imageButtonChistes
+        botonChistes.setOnClickListener{
+                view->
+            intent = Intent(this, ChistesActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+        botonDados = binding.imageButtonJuegoDados
+        botonDados.setOnClickListener{
+                view->
+            intent = Intent(this, JuegoDadosActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+
+        botonEmail = binding.imageButtonEmail
         botonEmail.setOnClickListener{
             val email = "micorreo@gmail.com"
             val intent = Intent(Intent.ACTION_SENDTO).apply {
@@ -57,13 +101,13 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        botonAlarma = binding.botonAlarma
+        botonAlarma = binding.imageButtonAlarma
         botonAlarma.setOnClickListener{
             crearAlarma()
         }
 
         var urlMap = "https://www.google.com/maps/preview"
-        botonMap = binding.botonMap
+        botonMap = binding.imageButtonMaps
         botonMap.setOnClickListener{
                 view->
             var link = Uri.parse(urlMap)
@@ -71,10 +115,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        botonAlarma = binding.botonAlarma
+        botonAlarma = binding.imageButtonAlarma
         botonAlarma.setOnClickListener{
             crearAlarma()
         }
+
+        botonHome = binding.imageButtonHome
+        botonHome.setOnClickListener{
+                view->
+            intent = Intent(this, MainActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+        botonMotos = binding.imageButtonMotos
+        botonMotos.setOnClickListener{
+                view->
+            intent = Intent(this, MotosActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+
 
     }
     private fun crearAlarma() {
@@ -92,4 +154,5 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "No se puede crear la alarma", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
