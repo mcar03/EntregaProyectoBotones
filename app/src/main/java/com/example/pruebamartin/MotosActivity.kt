@@ -7,11 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pruebamartin.controller.Controller
 import com.example.pruebamartin.databinding.ActivityMotosBinding
 
 class MotosActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMotosBinding
-
+    lateinit var binding: ActivityMotosBinding
+    lateinit var controller: Controller
 
     private lateinit var botonHome: ImageButton
     private lateinit var botonGuardados: ImageButton
@@ -29,6 +31,14 @@ class MotosActivity : AppCompatActivity() {
             insets
         }
         intiEvent()
+        initEventRecycler()
+    }
+
+    private fun initEventRecycler() {
+        binding.myRecyclerView.layoutManager = LinearLayoutManager(this)
+
+        controller = Controller(this)
+        controller.setAdapter()
     }
 
     private fun intiEvent() {
