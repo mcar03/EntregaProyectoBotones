@@ -92,7 +92,7 @@
                         app:cardCornerRadius="800dp">
 
                         <ImageButton
-                            android:id="@+id/imageButtonComentarios"
+                            android:id="@+id/imageButtonChistes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

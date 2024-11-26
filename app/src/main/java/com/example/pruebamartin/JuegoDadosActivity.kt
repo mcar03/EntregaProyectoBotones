@@ -18,20 +18,15 @@ import java.util.concurrent.TimeUnit
 import kotlin.random.Random
 
 class JuegoDadosActivity : AppCompatActivity() {
-    private var sum : Int = 0
+    private var sum: Int = 0
 
     private lateinit var binding: ActivityJuegodadosBinding
-    private lateinit var botonHome:ImageButton
-    private lateinit var botonGuardados:ImageButton
-    private lateinit var botonComentarios:ImageButton
-    private lateinit var botonAjustes:ImageButton
+    private lateinit var botonHome: ImageButton
+    private lateinit var botonGuardados: ImageButton
+    private lateinit var botonChistes: ImageButton
+    private lateinit var botonAjustes: ImageButton
 
-    private lateinit var imagenViewDados1 : ImageView
-    private lateinit var imagenViewDados2 : ImageView
-    private lateinit var imagenViewDados3 : ImageView
-
-
-    private lateinit var botonJugar : Button
+    private lateinit var botonJugar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +46,7 @@ class JuegoDadosActivity : AppCompatActivity() {
 
         //BOTON HOME
         botonHome = binding.imageButtonHome
-        botonHome.setOnClickListener{
+        botonHome.setOnClickListener {
                 view->
             intent = Intent(this, MainActivity::class.java).apply{
                 putExtra("name", "martin")
@@ -59,11 +54,33 @@ class JuegoDadosActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //BOTON GUARDADOS
-
-        //BOTON COMENTARIOS
-
+        //BOTON CHISTES
+        botonChistes = binding.imageButtonChistes
+        botonChistes.setOnClickListener {
+                view->
+            intent = Intent(this, ChistesActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
         //BOTON AJUSTES
+        botonAjustes = binding.imageButtonAjustes
+        botonAjustes.setOnClickListener {
+                view->
+            intent = Intent(this, AjustesActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
+        //BOTON GUARDADOS
+        botonGuardados = binding.imageButtonGuardado
+        botonGuardados.setOnClickListener {
+                view->
+            intent = Intent(this, GuardadosActivity::class.java).apply{
+                putExtra("name", "martin")
+            }
+            startActivity(intent)
+        }
 
         //BOTON JUGAR
 
@@ -73,6 +90,9 @@ class JuegoDadosActivity : AppCompatActivity() {
         }
 
     }
+
+
+
 
     private fun game() {
         val schedulerExecutor = Executors.newSingleThreadScheduledExecutor()
