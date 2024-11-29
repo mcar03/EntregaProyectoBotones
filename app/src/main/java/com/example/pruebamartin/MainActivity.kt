@@ -1,9 +1,13 @@
 package com.example.pruebamartin
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.AlarmClock
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -115,10 +119,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        botonAlarma = binding.imageButtonAlarma
-        botonAlarma.setOnClickListener{
-            crearAlarma()
-        }
 
         botonHome = binding.imageButtonHome
         botonHome.setOnClickListener{
@@ -141,18 +141,24 @@ class MainActivity : AppCompatActivity() {
     }
     private fun crearAlarma() {
         val alarma = Calendar.getInstance()
-        alarma.add(Calendar.MINUTE, 2)
-        intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
-            putExtra(AlarmClock.EXTRA_MESSAGE, "Alarma en 2 minutos")
+        alarma.add(Calendar.MINUTE, 2)  // Establece la alarma para dentro de 2 minutos
+
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_MESSAGE, "Alarma en 2 minutos") // El mensaje que puede mostrar el sistema
             putExtra(AlarmClock.EXTRA_HOUR, alarma.get(Calendar.HOUR_OF_DAY))
             putExtra(AlarmClock.EXTRA_MINUTES, alarma.get(Calendar.MINUTE))
         }
 
         if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
+            startActivity(intent)  // Dispara la alarma
+            Toast.makeText(this, "Alarma establecida para dentro de 2 minutos", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "No se puede crear la alarma", Toast.LENGTH_SHORT).show()
         }
     }
+
+
+
 
 }

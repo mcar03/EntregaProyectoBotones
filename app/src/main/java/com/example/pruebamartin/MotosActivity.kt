@@ -23,13 +23,15 @@ class MotosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding= ActivityMotosBinding.inflate(layoutInflater)
+        binding = ActivityMotosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         intiEvent()
         initEventRecycler()
     }
@@ -38,14 +40,13 @@ class MotosActivity : AppCompatActivity() {
         binding.myRecyclerView.layoutManager = LinearLayoutManager(this)
 
         controller = Controller(this)
-        controller.setAdapter()
+        controller.setAdapter()  // Esta función se encargará de poner el adaptador
     }
 
     private fun intiEvent() {
         botonHome = binding.imageButtonHome
         botonHome.setOnClickListener {
-                view->
-            intent = Intent(this, MainActivity::class.java).apply{
+            val intent = Intent(this, MainActivity::class.java).apply {
                 putExtra("name", "martin")
             }
             startActivity(intent)
@@ -53,8 +54,7 @@ class MotosActivity : AppCompatActivity() {
 
         botonChistes = binding.imageButtonChistes
         botonChistes.setOnClickListener {
-                view->
-            intent = Intent(this, ChistesActivity::class.java).apply{
+            val intent = Intent(this, ChistesActivity::class.java).apply {
                 putExtra("name", "martin")
             }
             startActivity(intent)
@@ -62,8 +62,7 @@ class MotosActivity : AppCompatActivity() {
 
         botonAjustes = binding.imageButtonAjustes
         botonAjustes.setOnClickListener {
-                view->
-            intent = Intent(this, AjustesActivity::class.java).apply{
+            val intent = Intent(this, AjustesActivity::class.java).apply {
                 putExtra("name", "martin")
             }
             startActivity(intent)
@@ -71,13 +70,10 @@ class MotosActivity : AppCompatActivity() {
 
         botonGuardados = binding.imageButtonGuardado
         botonGuardados.setOnClickListener {
-                view->
-            intent = Intent(this, GuardadosActivity::class.java).apply{
+            val intent = Intent(this, GuardadosActivity::class.java).apply {
                 putExtra("name", "martin")
             }
             startActivity(intent)
         }
     }
-
-
 }
